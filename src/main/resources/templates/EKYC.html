@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Title</title>
+
+
+    <!-- Begin shared CSS values -->
+    <style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+.text-container {
+	white-space: pre;
+}
+.div-h2 {
+    background-color: #f1f8ff;
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+.text-h2 {
+    text-align: left;
+    padding: 10px;
+    margin: 0px;
+}
+.table-basic {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.parent {
+   background-color: #FFFFFF;
+   height: 90px
+}
+
+.parent img {
+   padding : 10px;
+   height: 80%;
+}
+
+ol li {
+    margin: 5px 0;
+}
+</style>
+    <!-- End shared CSS values -->
+
+</head>
+<body>
+<div class="parent">
+    <img src="src/main/resources/templates/logo_raya.png"/>
+</div>
+
+<div style="background-color: #E6EEF5; ">
+    <h2 class="text-h2">Personal Data</h2>
+</div>
+
+<div style="padding: 10px; ">
+
+    <table style="width: 100%; font-size: 16px; font-weight: 100;">
+        <colgroup>
+            <col span="1" style="width: 30%;"/>
+            <col span="1" style="width: 5%;"/>
+            <col span="1" style="width: 65%;"/>
+        </colgroup>
+
+        <tbody>
+        <tr>
+            <td>NIK</td>
+            <td>:</td>
+            <td><span th:text="${nik}"></span></td>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td>:</td>
+            <td><span th:text="${full_name}"></span></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>:</td>
+            <td><span th:text="${gender}"></span></td>
+        </tr>
+        <tr>
+            <td>Birth Place</td>
+            <td>:</td>
+            <td>    <span th:text="${birth_place}"></span></td>
+        </tr>
+<!--        <tr>
+            <td>Birth Date</td>
+            <td>:</td>
+            <td>    <span th:text="${birth_date}"></span></td>
+        </tr>
+        <tr>
+            <td>Marital Status</td>
+            <td>:</td>
+            <td><span th:text="${marital_status}"></span></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td><span th:text="${address}"></span></td>
+        </tr>
+        <tr>
+            <td>Province</td>
+            <td>:</td>
+            <td><span th:text="${province}"></span></td>
+        </tr>
+        <tr>
+            <td>Ward/Village</td>
+            <td>:</td>
+            <td><span th:text="${ward}"></span></td>
+        </tr>
+        <tr>
+            <td>RT/RW</td>
+            <td>:</td>
+            <td><span th:text="${rt_rw}"></span></td>
+        </tr>
+        <tr>
+            <td>Postal Code</td>
+            <td>:</td>
+            <td><span th:text="${postal_code}"></span></td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>:</td>
+            <td><span th:text="${status}"></span></td>
+        </tr>
+        <tr>
+            <td>Nationality</td>
+            <td>:</td>
+            <td><span th:text="${nationality}"></span></td>
+        </tr>
+        <tr>
+            <td>Job</td>
+            <td>:</td>
+            <td><span th:text="${job}"></span></td>
+        </tr>
+        <tr>
+            <td>City/Regency</td>
+            <td>:</td>
+            <td><span th:text="${city_regency}"></span></td>
+        </tr>
+        <tr>
+            <td>Subdistrict</td>
+            <td>:</td>
+            <td><span th:text="${subdistrict}"></span></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td>:</td>
+            <td>    <span th:text="${phone_number}"></span></td>
+        </tr>
+        <tr>
+            <td>Submit Date</td>
+            <td>:</td>
+            <td>    <span th:text="${submit_date}"></span></td>
+        </tr>-->
+        </tbody>
+    </table>
+
+</div>
+
+<!--<div style="background-color: #E6EEF5; ">
+    <h2 class="text-h2">Complementary Data</h2>
+</div>
+
+<div style="padding: 10px; ">
+    <table style="width: 100%; font-size: 16px; font-weight: 100;">
+        <colgroup>
+            <col span="1" style="width: 30%;"/>
+            <col span="1" style="width: 5%;"/>
+            <col span="1" style="width: 65%;"/>
+        </colgroup>
+
+        <tbody>
+
+        <tr>
+            <td>Biological Mother Name</td>
+            <td>:</td>
+            <td>    <span th:text="${mother_name}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Email </td>
+            <td>:</td>
+            <td><span th:text="${email}"></span></td>
+        </tr>
+        <tr>
+            <td>Educational Status</td>
+            <td>:</td>
+            <td>    <span th:text="${education}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>NPWP </td>
+            <td>:</td>
+            <td><span th:text="${npwp}"></span></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+<div style="background-color: #E6EEF5; ">
+<h2 class="text-h2">Job Data</h2>
+</div>
+
+<div style="padding: 10px; ">
+<table style="width: 100%; font-size: 16px; font-weight: 100;">
+    <colgroup>
+        <col span="1" style="width: 30%;"/>
+        <col span="1" style="width: 5%;"/>
+        <col span="1" style="width: 65%;"/>
+    </colgroup>
+
+    <tbody>
+
+        <tr>
+            <td>Income/Month</td>
+            <td>:</td>
+            <td>    <span th:text="${income}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Expense/Month</td>
+            <td>:</td>
+            <td><span th:text="${expense}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Purpose of Account Opening</td>
+            <td>:</td>
+            <td>    <span th:text="${purpose_of_account_opening}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Source of Funds</td>
+            <td>:</td>
+            <td>    <span th:text="${source_of_funds}"></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div style="background-color: #E6EEF5; ">
+    <h2 class="text-h2">Score</h2>
+</div>
+<div style="padding: 10px; ">
+    <table style="width: 100%; font-size: 16px; font-weight: 100;">
+        <colgroup>
+            <col span="1" style="width: 30%;"/>
+            <col span="1" style="width: 5%;"/>
+            <col span="1" style="width: 65%;"/>
+        </colgroup>
+    
+        <tbody>
+    
+            <tr>
+                <td>Name Score</td>
+                <td>:</td>
+                <td>    <span th:text="${name_score}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Address Score</td>
+                <td>:</td>
+                <td><span th:text="${address_score}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Birth Place Score</td>
+                <td>:</td>
+                <td>    <span th:text="${birth_place_score}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Birth Date Score</td>
+                <td>:</td>
+                <td>    <span th:text="${birth_date_score}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Biometric Score</td>
+                <td>:</td>
+                <td>    <span th:text="${biometric_score}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Liveness</td>
+                <td>:</td>
+                <td>    <span th:text="${liveness}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Score</td>
+                <td>:</td>
+                <td>    <span th:text="${total_score}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Average Score</td>
+                <td>:</td>
+                <td>    <span th:text="${average_score}"></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </ol>-->
+    
+<!--    <div style="text-align: left;margin: 20px;">
+        <td>KTP</td>
+        <img width="250px" th:src="|data:image/png;base64,${image_qr_base64}|" alt="ktp" />
+    </div>
+    <div style="text-align: right;margin: 20px;">
+        <td>Photo</td>
+        <img width="250px" th:src="|data:image/png;base64,${image_qr_base64}|" alt="photo" />
+    </div>
+
+
+</div>-->
+</body>
+</html>
